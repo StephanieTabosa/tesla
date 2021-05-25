@@ -1,0 +1,235 @@
+/*VARIÁVEIS*/
+
+:root {
+    --header-color: #000;
+    --h1-color: #393c41;
+    --h2-color: #6e7378;
+    --btn-dark-bg: rgba(23, 26, 32, 0.8);
+    --btn-light-bg: rgba(255, 255, 255, 0.65);
+    --btn-dark-color: #fff;
+    --btn-light-color: #000;
+}
+
+/*FONTES*/
+
+@font-face {
+    font-family: GothamMedium;
+    src: url("../fonts/GothamMedium.otf");
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url("../fonts/GothamBookRegular.otf")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'GothamMedium', Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*HEADER*/
+
+header ul li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .logo {
+    margin-left: 20px;
+    width: 120px;
+}
+
+header .middle ul {
+    display: flex;
+}
+
+header .middle ul li {
+    padding: 10px;
+}
+
+header .rightside ul {
+    display: flex;
+}
+
+header .middle ul li a {
+    text-transform: uppercase;
+    color: var(--header-color);
+}
+
+header .rightside ul {
+    display: flex;
+}
+
+header .rightside ul li {
+    padding: 10px;
+}
+
+header .rightside ul li a {
+    text-transform: uppercase;
+    color: var(--header-color);
+}
+
+header .menu--icon {
+    width: 18px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+header .menu--icon div {
+    height: 2px;
+    background: var(--header-color);
+}
+
+/*MAIN*/
+
+main {
+    background: url("../images/bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+main .info {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: normal;
+    color: var(--h1-color);
+}
+
+main h2 {
+    margin: 0;
+    font-size: 1.05em;
+    font-weight: normal;
+    font-family: 'GothamBook', Arial, Helvetica, sans-serif;
+    color: var(--h2-color);
+}
+
+main h2 a {
+    text-decoration: underline;
+    color: var(--h1-color);
+    line-height: 1.5em;
+}
+
+/*FOOTER*/
+
+footer {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+}
+
+footer .buttons--area {
+    display: flex;
+    justify-content: center;
+}
+
+footer .buttons--area a {
+    display: block;
+    width: 220px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.75em;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 0 10px;
+}
+
+footer .btn--dark {
+    background: var(--btn-dark-bg);
+    color: var(--btn-dark-color);
+}
+
+footer .btn--light {
+    background: var(--btn-light-bg);
+    color: var(--btn-light-color);
+}
+
+footer .arrow--area {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 20px;
+}
+
+@keyframes arrow {
+    0% {
+        margin-top: 0px;
+    }
+    40% {
+        margin-top: 5px;
+    }
+    60% {
+        margin-top: 2px;
+    }
+    80% {
+        margin-top: 5px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+footer .arrow {
+    display: block;
+    height: 15px;
+    cursor: pointer;
+    animation-name: arrow;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1200px) {
+    header .middle {
+        display: none;
+    }
+    header .rightside li {
+        display: none;
+    }
+    header .rightside li.menu {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer .buttons--area {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .buttons--area a {
+        margin: 10px 20px;
+        width: calc(100vw - 80px);
+    }
+}
