@@ -20,7 +20,7 @@ O projeto contém apenas a primeira página do site da Tesla:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://user-images.githubusercontent.com/41654616/119561589-c180c180-bd7b-11eb-95da-e1912aaec600.png" width="100px;" alt="Avatar Stèphanie"/><br>
         <sub>
           <b>Stèphanie Tabosa</b>
         </sub>
